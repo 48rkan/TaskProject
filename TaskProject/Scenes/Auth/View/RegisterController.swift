@@ -12,6 +12,8 @@ class RegisterController: UIViewController {
     //MARK: - Properties
     var viewModel = RegisterViewModel()
     
+    var coordinator: AppCoordinator?
+    
     private lazy var plusButton: UIButton = {
         let b = UIButton(type: .system)
         b.setImage(Assets.plus.image(), for: .normal)
@@ -51,6 +53,9 @@ class RegisterController: UIViewController {
         super.viewDidLoad()
         configureUI()
         configDelegates()
+        
+        guard let nav = navigationController else { return }
+        coordinator = AppCoordinator(navigationController: nav)
     }
     
     //MARK: - Actions
@@ -78,10 +83,12 @@ class RegisterController: UIViewController {
         
         UserDefaults.standard.set(url, forKey: "USER_IMAGE")
                 
-        navigationController?.popViewController(animated: true)
+        coordinator?.backLogin()
     }
     
-    @objc func tappedGoLoginScene() { navigationController?.popViewController(animated: true) }
+    @objc func tappedGoLoginScene() {
+        coordinator?.backLogin()
+    }
 }
 
 //MARK: - Helpers

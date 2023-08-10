@@ -10,12 +10,11 @@ import UIKit
 class FeedController: UIViewController {
     
     //MARK: - Properties
+    var coordinator: AppCoordinator?
+    
     private lazy var collection: CustomCollectionView = {
         let c = CustomCollectionView(scroll: .vertical, spacing: 16)
-        c.contentInset.right  = 8
-        c.contentInset.left   = 8
-        c.contentInset.top    = 8
-        c.contentInset.bottom = 8
+
         c.register(FeedHeader.self,
                    forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                    withReuseIdentifier: "\(FeedHeader.self)")
@@ -26,6 +25,8 @@ class FeedController: UIViewController {
                    forCellWithReuseIdentifier: "\(FeedCell.self)")
         c.delegate   = self
         c.dataSource = self
+        c.contentInset.right  = 8
+        c.contentInset.left   = 8
         c.backgroundColor = .white
         
         return c
@@ -36,6 +37,9 @@ class FeedController: UIViewController {
         super.viewDidLoad()
         configure()
         configureUI()
+        
+        guard let nav = navigationController else { return }
+        coordinator = AppCoordinator(navigationController: nav)
     }
 }
 
@@ -43,17 +47,10 @@ class FeedController: UIViewController {
 extension FeedController {
     func configure() {
         DispatchQueue.main.async {
-            if !UserDefaults.standard.bool(forKey: "USER_IS_LOGIN") {
-                let controller      = LoginController()
-                controller.delegate = self
-                let nav = UINavigationController(rootViewController: controller)
-                nav.modalPresentationStyle = .fullScreen
-                
-                self.present(nav, animated: false)
-            } else {
-            }
+            guard !UserDefaults.standard.bool(forKey: "USER_IS_LOGIN") else { return }
+            
+            self.coordinator?.showLogin(delegate: self)
         }
-
     }
     
     func configureUI() {
@@ -63,7 +60,17 @@ extension FeedController {
 }
 
 //MARK: - UICollectionViewDelegate
-extension FeedController: UICollectionViewDelegate { }
+extension FeedController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch MenuFilterOptions(rawValue: indexPath.item) {
+        case .currency:
+            coordinator?.showCurrency()
+        case .support:
+            showMessageActionSheet(title: "Call 133") { }
+        case _ : break
+        }
+    }
+}
 
 //MARK: - UICollectionViewDataSource
 extension FeedController: UICollectionViewDataSource {
@@ -73,10 +80,7 @@ extension FeedController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collection.dequeueReusableCell(withReuseIdentifier: "\(FeedCell.self)", for: indexPath) as! FeedCell
-        let item = MenuFilterOptions.allCases[indexPath.row]
-        cell.viewModel = FeedCellViewModel(items: (item.title,
-                                                   item.description,
-                                                   item.imageName))
+        cell.viewModel = FeedCellViewModel(items: MenuFilterOptions(rawValue: indexPath.item) ?? .none )
         return cell
     }
     
@@ -92,8 +96,8 @@ extension FeedController: UICollectionViewDataSource {
             let footer = collection.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "\(FeedFooter.self)", for: indexPath) as! FeedFooter
             footer.delegate = self
             return footer
-        default:
-            return UICollectionReusableView()
+        
+        default: return UICollectionReusableView()
         }
     }
 }
@@ -122,14 +126,9 @@ extension FeedController: LoginControllerDelegate {
 //MARK: - FeedFooterDelegate
 extension FeedController: FeedFooterDelegate {
     func tappedFooter(_ footer: FeedFooter) {
-        let controller      = LoginController()
-        controller.delegate = self
-        let nav = UINavigationController(rootViewController: controller)
-        nav.modalPresentationStyle = .fullScreen
-        
-        self.present(nav, animated: false)
+        coordinator?.showLogin(delegate: self)
         
         UserDefaults.standard.setValue(false, forKey: "USER_IS_LOGIN")
-
     }
 }
+

@@ -16,6 +16,8 @@ class LoginController: UIViewController {
     //MARK: - Properties
     var viewModel = LoginViewModel()
     
+    var coordinator: AppCoordinator?
+    
     weak var delegate: LoginControllerDelegate?
     
     private let emailContainerView    = CustomContainerView(image: Assets.mail.image(),
@@ -47,12 +49,14 @@ class LoginController: UIViewController {
         super.viewDidLoad()
         configureUI()
         configDelegates()
+        
+        guard let nav = navigationController else { return }
+        coordinator = AppCoordinator(navigationController: nav)
     }
     
     //MARK: - Actions
     @objc func tappedGoRegister() {
-        let controller = RegisterController()
-        navigationController?.show(controller, sender: nil)
+        coordinator?.showRegister()
     }
     
     @objc func tappedLogInButton() {

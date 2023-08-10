@@ -9,10 +9,10 @@ import Foundation
 
 class FeedCellViewModel {
     //MARK: - Properties
-    var items: (String,String,String)
+    var items: MenuFilterOptions
     
     //MARK: - Lifecycle
-    init(items: (String, String,String)) {
+    init(items: MenuFilterOptions) {
         self.items = items
     }
 }

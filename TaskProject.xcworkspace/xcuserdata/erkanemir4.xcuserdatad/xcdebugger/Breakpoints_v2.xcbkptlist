@@ -14,8 +14,8 @@
             filePath = "TaskProject/Scenes/Feed/View/FeedController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "didFinishAuth()"
             landmarkType = "7">
          </BreakpointContent>
@@ -23,188 +23,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F2E90CC5-F359-46F6-90F6-99B980F18AEF"
+            uuid = "A22E8A2E-DA7E-4B33-B38B-792341BF884D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TaskProject/Scenes/Feed/ViewModel/FoodHeaderViewModel.swift"
+            filePath = "TaskProject/Scenes/Currency/ViewModel/CurrencyViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "fullName"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A7906CBD-6B47-4866-9FE1-E7350EF04414"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TaskProject/Scenes/Feed/View/FeedController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "collectionView(_:viewForSupplementaryElementOfKind:at:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "100981D5-99ED-47BF-B382-962FA27D6304"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TaskProject/Scenes/Feed/View/FeedHeader.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "10"
-            endingLineNumber = "10"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "09F1FB7E-FDFD-4B6E-B802-423734D70311"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TaskProject/Scenes/Feed/View/FeedHeader.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "09F1FB7E-FDFD-4B6E-B802-423734D70311 - a999964bffdd9935"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TaskProject.FeedHeader.viewModel.getter : TaskProject.FoodHeaderViewModel"
-                  moduleName = "TaskProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/erkanemir4/Desktop/TaskProject/TaskProject/Scenes/Feed/View/FeedHeader.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "88">
-               </Location>
-               <Location
-                  uuid = "09F1FB7E-FDFD-4B6E-B802-423734D70311 - d9280465fa738539"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TaskProject.FeedHeader.viewModel.setter : TaskProject.FoodHeaderViewModel"
-                  moduleName = "TaskProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/erkanemir4/Desktop/TaskProject/TaskProject/Scenes/Feed/View/FeedHeader.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  uuid = "09F1FB7E-FDFD-4B6E-B802-423734D70311 - 95643606cfdf2c08"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TaskProject.FeedHeader.viewModel.modify : TaskProject.FoodHeaderViewModel"
-                  moduleName = "TaskProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/erkanemir4/Desktop/TaskProject/TaskProject/Scenes/Feed/View/FeedHeader.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  uuid = "09F1FB7E-FDFD-4B6E-B802-423734D70311 - 37e600b945cc790f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TaskProject.FeedHeader.viewModel.modify : TaskProject.FoodHeaderViewModel with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "TaskProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/erkanemir4/Desktop/TaskProject/TaskProject/Scenes/Feed/View/FeedHeader.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  uuid = "09F1FB7E-FDFD-4B6E-B802-423734D70311 - 9aebd961d3bf0be9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TaskProject.FeedHeader.init(frame: __C.CGRect) -&gt; TaskProject.FeedHeader"
-                  moduleName = "TaskProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/erkanemir4/Desktop/TaskProject/TaskProject/Scenes/Feed/View/FeedHeader.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "100">
-               </Location>
-               <Location
-                  uuid = "09F1FB7E-FDFD-4B6E-B802-423734D70311 - 1244e973e3e59895"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TaskProject.FeedHeader.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;TaskProject.FeedHeader&gt;"
-                  moduleName = "TaskProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/erkanemir4/Desktop/TaskProject/TaskProject/Scenes/Feed/View/FeedHeader.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "88">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "11C69D1E-21A2-474F-A9CA-32B3BE2F3BC0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TaskProject/Scenes/Feed/ViewModel/FoodHeaderViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "init()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7E2961BB-2847-4472-8E13-4EFB4237A2D2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TaskProject/Scenes/Feed/View/FeedController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "collectionView(_:viewForSupplementaryElementOfKind:at:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "fetchData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

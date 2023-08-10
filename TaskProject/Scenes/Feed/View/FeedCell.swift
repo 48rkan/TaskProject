@@ -64,8 +64,8 @@ class FeedCell: UICollectionViewCell {
     
     func configure() {
         guard let viewModel else { return }
-        titleLabel.text       = viewModel.items.0
-        descriptionLabel.text = viewModel.items.1
-        iconImageView.image   = UIImage(named: viewModel.items.2)
+        titleLabel.text       = viewModel.items.title
+        descriptionLabel.text = viewModel.items.description
+        iconImageView.image   = UIImage(named: viewModel.items.imageName)
     }
 }

@@ -3,20 +3,21 @@
 //  TaskProject
 //
 //  Created by Erkan Emir on 10.08.23.
-//
 
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    var window: UIWindow?
+    var window     : UIWindow?
+    var coordinator: AppCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = UINavigationController(rootViewController: FeedController())
-        window?.makeKeyAndVisible()
+        coordinator = AppCoordinator(navigationController: UINavigationController())
+        coordinator?.start(window: window!)
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) { }
