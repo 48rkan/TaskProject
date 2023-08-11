@@ -23,7 +23,7 @@ class CurrencyCell: UICollectionViewCell {
         return iv
     }()
     
-    private lazy var currencyNameLabel: CustomLabel = {
+    private let currencyNameLabel: CustomLabel = {
         let l = CustomLabel(text: "USD",
                             textColor: .black,
                             systemfont: UIFont.boldSystemFont(ofSize: 16),
@@ -31,7 +31,7 @@ class CurrencyCell: UICollectionViewCell {
         return l
     }()
     
-    private lazy var purchasePriceLabel: CustomLabel = {
+    private let purchasePriceLabel: CustomLabel = {
         let l = CustomLabel(text: "1.6905",
                             textColor: .black,
                             systemfont: UIFont.systemFont(ofSize: 16),
@@ -39,7 +39,7 @@ class CurrencyCell: UICollectionViewCell {
         return l
     }()
     
-    private lazy var salePriceLabel: CustomLabel = {
+    private let  salePriceLabel: CustomLabel = {
         let l = CustomLabel(text: "1.712",
                             textColor: .black,
                             systemfont: UIFont.systemFont(ofSize: 16),

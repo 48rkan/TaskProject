@@ -67,6 +67,8 @@ extension FeedController: UICollectionViewDelegate {
             coordinator?.showCurrency()
         case .support:
             showMessageActionSheet(title: "Call 133") { }
+        case .conversion:
+            coordinator?.showConversion()
         case _ : break
         }
     }
@@ -80,7 +82,7 @@ extension FeedController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collection.dequeueReusableCell(withReuseIdentifier: "\(FeedCell.self)", for: indexPath) as! FeedCell
-        cell.viewModel = FeedCellViewModel(items: MenuFilterOptions(rawValue: indexPath.item) ?? .none )
+        cell.viewModel = FeedCellViewModel(items: MenuFilterOptions(rawValue: indexPath.item) ?? .support )
         return cell
     }
     

@@ -15,7 +15,7 @@ class FeedHeader: UICollectionReusableView {
     }
     
     private lazy var infoLabel: CustomLabel = {
-        let l = CustomLabel(text: " Xoş gəlmişsiniz, \n \(viewModel.fullName)",
+        let l = CustomLabel(text: " Xoş gəlmişsiniz, \n\(viewModel.fullName)",
                             textColor: .black,
                             systemfont: UIFont.boldSystemFont(ofSize: 24),
                             alignment: .left,numberOfLines: 0)
@@ -33,7 +33,6 @@ class FeedHeader: UICollectionReusableView {
     //MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
-//        backgroundColor = .lightGray
         configureUI()
     }
     
@@ -52,7 +51,7 @@ class FeedHeader: UICollectionReusableView {
     
     func configure() {
         guard let data = viewModel.imageData else { return }
-        infoLabel.text = "Xoş gəlmişsiniz, \n \(viewModel.fullName)"
+        infoLabel.text = "Xoş gəlmişsiniz, \n\(viewModel.fullName)"
         profileImageView.image = UIImage(data: data)
     }
 }

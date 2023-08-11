@@ -1,13 +1,16 @@
 //
-//  CurrencyViewModel.swift
+//  ConversionViewModel.swift
 //  TaskProject
 //
 //  Created by Erkan Emir on 11.08.23.
+//
 
 import Foundation
 
-class CurrencyViewModel {
-    var items =  [Country]()
+import Foundation
+
+class ConversionViewModel {
+    var items =  [Conversion]()
     var successCallBack: (()->())?
     
     init() {
@@ -15,30 +18,28 @@ class CurrencyViewModel {
     }
 
     func fetchData() {
-        guard let url = Bundle.main.url(forResource: "CurrencyJson", withExtension: "json") else { return }
+        guard let url = Bundle.main.url(forResource: "ConversionJSON", withExtension: "json") else { return }
     
         do {
             let data = try Data(contentsOf: url)
-            items = try JSONDecoder().decode([Country].self, from: data)
-            
+            items = try JSONDecoder().decode([Conversion].self, from: data)
+            print(items)
             successCallBack?()
         } catch {
             print("DEBUG:\(error.localizedDescription)")
         }
     }
     
-    
-    func fetchCashData() {
-        guard let url = Bundle.main.url(forResource: "CashCurrencyJSON", withExtension: "json") else { return }
+    func fetchSaleData() {
+        guard let url = Bundle.main.url(forResource: "SaleConversionJSON", withExtension: "json") else { return }
     
         do {
             let data = try Data(contentsOf: url)
-            items = try JSONDecoder().decode([Country].self, from: data)
-            
+            items = try JSONDecoder().decode([Conversion].self, from: data)
+            print(items)
             successCallBack?()
         } catch {
             print("DEBUG:\(error.localizedDescription)")
         }
     }
 }
-

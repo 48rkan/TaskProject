@@ -1,0 +1,20 @@
+
+[
+    { "sell":"1.705",
+        "name":"USD",
+        "image":"https://www.freepnglogos.com/uploads/american-flag-png/simple-american-flag-16.png"
+        ,"purchase":"1.681"
+    },
+    
+    { "sell":"1.714",
+        "name":"EUR",
+        "image":"https://cdn.pixabay.com/photo/2020/02/28/02/21/europe-4886332_1280.png"
+        ,"purchase":"1.695"
+    },
+    
+    { "sell":"0.0285",
+        "name":"RUB",
+        "image":"https:\/\/www.worldatlas.com\/r\/w960-q80\/img\/flag\/ru-flag.jpg",
+        "purchase":"0.0275"
+    }
+]

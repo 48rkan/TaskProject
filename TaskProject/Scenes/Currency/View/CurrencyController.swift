@@ -47,8 +47,14 @@ class CurrencyController: UIViewController {
     
     //MARK: - Actions
     @objc func segmentControlDidChanged(sender: UISegmentedControl) {
-        print(sender.selectedSegmentIndex)
-    }
+        switch sender.selectedSegmentIndex {
+        case 0:
+            viewModel.fetchData()
+        case 1:
+            viewModel.fetchCashData()
+
+        case _ : break
+        }    }
     
     //MARK: - Helper
     func configureUI() {
