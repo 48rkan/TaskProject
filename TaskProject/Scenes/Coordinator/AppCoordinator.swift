@@ -49,8 +49,6 @@ class AppCoordinator: Coordinator {
     
     func showConversion() {
         let controller = ConversionController()
-//        navigationController.show(controller, sender: nil)
         navigationController.present(controller, animated: true)
     }
-    
 }

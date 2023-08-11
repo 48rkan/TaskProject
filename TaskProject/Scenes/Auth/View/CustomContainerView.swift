@@ -3,7 +3,6 @@
 //  TaskProject
 //
 //  Created by Erkan Emir on 10.08.23.
-//
 
 import UIKit
 
@@ -32,10 +31,12 @@ class CustomContainerView: UIView {
     
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been") }
     
+    //MARK: - Actions
     @objc func changedTextField(sender: UITextField) {
         delegate?.didChangeTextField(sender: sender, text: sender.text ?? "")
     }
     
+    //MARK: - Helper
     private func configureUI(image: UIImage,placeholder: String,secure: Bool) {
         addSubview(imageView)
         imageView.centerY(inView: self ,leftAnchor: leftAnchor,paddingLeft: 4)

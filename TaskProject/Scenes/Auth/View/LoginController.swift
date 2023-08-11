@@ -3,7 +3,6 @@
 //  TaskProject
 //
 //  Created by Erkan Emir on 10.08.23.
-//
 
 import UIKit
 
@@ -16,8 +15,7 @@ class LoginController: UIViewController {
     //MARK: - Properties
     var viewModel = LoginViewModel()
     
-    var coordinator: AppCoordinator?
-    
+    var coordinator  : AppCoordinator?
     weak var delegate: LoginControllerDelegate?
     
     private let emailContainerView    = CustomContainerView(image: Assets.mail.image(),

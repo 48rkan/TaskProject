@@ -10,10 +10,7 @@ import UIKit
 @main class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        UserDefaults.standard.setValue(false, forKey: "USER_IS_LOGIN")
-
         return true
-
     }
 
     // MARK: UISceneSession Lifecycle
