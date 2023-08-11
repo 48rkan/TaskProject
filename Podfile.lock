@@ -1,7 +1,5 @@
 PODS:
-  - JGProgressHUD (2.2)
   - KeychainSwift (20.0.0)
-  - PanModal (1.2.7)
   - PryntTrimmerView (4.0.2)
   - SDWebImage (5.15.7):
     - SDWebImage/Core (= 5.15.7)
@@ -12,31 +10,25 @@ PODS:
     - SteviaLayout (= 4.7.3)
 
 DEPENDENCIES:
-  - JGProgressHUD
   - KeychainSwift (~> 20.0)
-  - PanModal
   - SDWebImage
   - YPImagePicker
 
 SPEC REPOS:
   trunk:
-    - JGProgressHUD
     - KeychainSwift
-    - PanModal
     - PryntTrimmerView
     - SDWebImage
     - SteviaLayout
     - YPImagePicker
 
 SPEC CHECKSUMS:
-  JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   KeychainSwift: 0ce6a4d13f7228054d1a71bb1b500448fb2ab837
-  PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
   SDWebImage: 25bac438318faf37e35650619ebc288a9061d292
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: e1ca3b700ce958309fe6ad52b0577f3fb6aa618e
+PODFILE CHECKSUM: 7b8d971d72355025bad79e661dbdb5d7fc040e2c
 
 COCOAPODS: 1.11.3

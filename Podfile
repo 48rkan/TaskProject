@@ -8,8 +8,6 @@ target 'TaskProject' do
   # Pods for TaskProject
 pod 'SDWebImage'
 pod 'KeychainSwift', '~> 20.0'
-pod 'PanModal'
-pod 'JGProgressHUD'
 pod 'YPImagePicker'
 
 
