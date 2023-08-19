@@ -23,10 +23,20 @@ class ConversionViewModel {
         do {
             let data = try Data(contentsOf: url)
             items = try JSONDecoder().decode([Conversion].self, from: data)
-            print(items)
+            
             successCallBack?()
         } catch {
             print("DEBUG:\(error.localizedDescription)")
+        }
+    }
+    
+    func checkCoffient(coffient: Double,completion: @escaping ()->()) {
+        items.forEach { item in
+            guard let index = self.items.firstIndex(where: { $0.name == item.name}) else { return }
+            let amount = self.items[index].amount.double * coffient
+            
+            self.items[index].total = amount.string
+            completion()
         }
     }
     

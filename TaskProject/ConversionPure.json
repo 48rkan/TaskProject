@@ -1,0 +1,10 @@
+{
+    "result": "success",
+    "base_code": "USD",
+    "rates": {
+        "AZN" : "1",
+        "USD" : "0.62",
+        "EUR" : "0.75",
+        "RUBL": "10",
+    }
+}

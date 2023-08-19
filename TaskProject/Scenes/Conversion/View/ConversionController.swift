@@ -44,7 +44,6 @@ class ConversionController: UIViewController {
             viewModel.fetchData()
         case 1:
             viewModel.fetchSaleData()
-
         case _ : break
         }
     }
@@ -78,6 +77,7 @@ extension ConversionController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: "\(ConversionCell.self)") as! ConversionCell
         cell.viewModel = ConversionCellViewModel(item: viewModel.items[indexPath.row])
+        cell.delegate = self
         return cell
     }
 }
@@ -90,6 +90,13 @@ extension ConversionController {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         60
+    }
+}
+
+//MARK: - ConversionController
+extension ConversionController: ConversionCellDelegate {
+    func editingChanged(coffient: Double) {
+        viewModel.checkCoffient(coffient: coffient) { self.table.reloadData() }
     }
 }
 

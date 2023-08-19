@@ -12,25 +12,35 @@ class FeedController: UIViewController {
     //MARK: - Properties
     var coordinator: AppCoordinator?
     
-    private lazy var collection: CustomCollectionView = {
-        let c = CustomCollectionView(scroll: .vertical, spacing: 16)
-
-        c.register(FeedHeader.self,
-                   forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-                   withReuseIdentifier: "\(FeedHeader.self)")
-        c.register(FeedFooter.self,
-                   forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
-                   withReuseIdentifier: "\(FeedFooter.self)")
-        c.register(FeedCell.self,
-                   forCellWithReuseIdentifier: "\(FeedCell.self)")
-        c.delegate   = self
-        c.dataSource = self
-        c.contentInset.right  = 8
-        c.contentInset.left   = 8
-        c.backgroundColor = .white
-        
+    private lazy var collection: CustomCollectionView2 = {
+        let c = CustomCollectionView2(scroll: .vertical, spacing: 16,
+                                      delegate: self, dataSource: self,
+                                      registerCell  : FeedCell.self ,
+                                      registerHeader: FeedHeader.self,
+                                      registerFooter: FeedFooter.self)
+        c.configureContentInset(top: 4, left: 8, right: 8, bottom: 4)
         return c
     }()
+    
+//    private lazy var collection: CustomCollectionView = {
+//        let c = CustomCollectionView(scroll: .vertical, spacing: 16)
+//
+//        c.register(FeedHeader.self,
+//                   forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+//                   withReuseIdentifier: "\(FeedHeader.self)")
+//        c.register(FeedFooter.self,
+//                   forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+//                   withReuseIdentifier: "\(FeedFooter.self)")
+//        c.register(FeedCell.self,
+//                   forCellWithReuseIdentifier: "\(FeedCell.self)")
+//        c.delegate   = self
+//        c.dataSource = self
+//        c.contentInset.right  = 8
+//        c.contentInset.left   = 8
+//        c.backgroundColor = .white
+//
+//        return c
+//    }()
     
     //MARK: - Lifecycle
     override func viewDidLoad() {

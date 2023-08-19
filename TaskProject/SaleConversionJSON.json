@@ -2,24 +2,28 @@
 
 [
     { "amount":"1",
+        "total":"1",
         "name":"AZN",
         "image":"https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-original-577x577/s3/0019/5886/brand.gif?itok=9TeQGauv"
         ,"description":"Azərb. yeni manatı"
     },
     
     { "amount":"0.65",
+        "total":"0,65",
         "name":"USD",
         "image":"https://logowik.com/content/uploads/images/dollar3010.jpg"
         ,"description":"Amerika dolları"
     },
     
     { "amount":"0.592",
+        "total":"0.592",
         "name":"EUR",
         "image":"https://media.istockphoto.com/id/1049044320/tr/vekt%C3%B6r/euro-i%C5%9Fareti-simgesi-mobil-kavram%C4%B1-ve-web-uygulamalar%C4%B1-i%C3%A7in-web-simge-unsuru-ince-%C3%A7izgi-euro.jpg?s=1024x1024&w=is&k=20&c=sQSrWm2UhXa0u6CXYALTXUMcJFVfKQIxle8g2zRR6to="
         ,"description":"Avro"
     },
     
     { "amount":"53.323",
+        "total":"53.323",
         "name":"RUB",
         "image":"https://media.istockphoto.com/id/1048087260/vector/ruble.jpg?s=1024x1024&w=is&k=20&c=NzZ2G6iIFyx4XXtm5dj6ywW5djdICJaf-eFctkp6kfI="
         ,"description":"Rusiya rublu"

@@ -11,6 +11,6 @@ class ConversionCellViewModel {
     var item: Conversion
     
     init(item: Conversion) {
-        self.item = item
+        self.item  = item
     }
 }

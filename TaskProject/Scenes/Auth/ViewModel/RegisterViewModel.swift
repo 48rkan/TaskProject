@@ -8,10 +8,9 @@
 import UIKit
 
 class RegisterViewModel {
-    var email: String?
+    var email   : String?
     var password: String?
     var fullName: String?
-    
     var selectedImage: UIImage?
     
     var formIsValid: Bool {

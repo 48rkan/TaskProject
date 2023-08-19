@@ -8,8 +8,9 @@ import Foundation
 
 // MARK: - StructElement
 struct Conversion: Codable {
-    let amount, name: String?
-    let image: String?
-    let description: String?
+    var amount, name: String
+    let image       : String
+    let description : String
+    var total       : String?
 }
 
